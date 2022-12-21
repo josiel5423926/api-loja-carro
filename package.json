@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon start"
+    "dev": "node index.js"
   },
   "author": "Josiel Souza",
   "license": "ISC",
