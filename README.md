@@ -1,17 +1,16 @@
 Sequência para criar o projeto
 ### npm install
 Criar o arquivo package. json 
-#### npm init -y
+#### npm init
 
+Gerênciar as requisições, rotas e urls, entre outras funcionalidades
+### npm install express 
 
-###  npm i json-server
-Instalando o json-server para criar um servidor pra gente
+nodemon versão npm install nodemon@1.10.2 --dev
+### npm install nodemon@1.10.2 --dev
 
-rodar o projeto com npm start 
+Rodar o projeto 
+### npm run dev
 
-para visualizar no navegado com a rota http://localhost:3001
-depois clicar em produtos ou jogar essa rota direto http://localhost:3001/products
-
-
-Para verificar outros projetos mais complexo mude a branch.
-### git checkout <nome-branch>
+Instalou a biblioteca uuid
+### npm install uuid
