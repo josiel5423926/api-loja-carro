@@ -33,6 +33,12 @@ route.get("/contato", (req, res) => {
       email: "solange@gmail.com",
       createdAt: "05-11-2022",
     },
+    {
+      id: 4,
+      nome: "Solange Duarte",
+      email: "solange@gmail.com",
+      createdAt: "05-11-2022",
+    }
   ];
   res.json({
     //mostrar resultado da consulta
@@ -41,7 +47,8 @@ route.get("/contato", (req, res) => {
   });
 });
 app.use(route);
-const PORT = 8080;
-app.listen(PORT, () => {
-  console.log("server booted on port 8080, rota http://localhost:8080/contato");
-});
+const port = process.env.PORT || 4000
+
+app.listen(port, () => {
+    console.log('Server running in ' + port)
+})
