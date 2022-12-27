@@ -38,6 +38,12 @@ route.get("/contato", (req, res) => {
       nome: "Solange Duarte",
       email: "solange@gmail.com",
       createdAt: "05-11-2022",
+    },
+    {
+      id: 5,
+      nome: "Josiel Souza",
+      email: "solange@gmail.com",
+      createdAt: "05-11-2022",
     }
   ];
   res.json({
