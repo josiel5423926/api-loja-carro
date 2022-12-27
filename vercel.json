@@ -1,12 +1,14 @@
 {
-  "name": "api-db-json",
   "version": 2,
+  "public": true,
   "builds": {
-     "api": "api/index.js",
-      "use": "@vercel/node"
-     },
+    "api": "api/index.js",
+    "use": "@vercel/node"
+  },
   "routes": [
-    { 
+    {
       "src": "/(.*)",
-      "dest": "api/index.js" }]
+      "dest": "api/index.js"
+    }
+  ]
 }
