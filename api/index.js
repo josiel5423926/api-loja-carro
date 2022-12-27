@@ -1,16 +1,18 @@
-const express = require("express");
-const cors = require("cors");
-
+import express from "express";
+import { Router } from "express";
+//const cors = require("cors");
 const app = express();
-app.use(cors());
-app.use(express.json());
+const route = Router();
+
+//app.use(cors());
+//app.use(express.json());
 
 
-app.get("/", (req, res) => {
+route.get("/", (req, res) => {
   res.send("sucesso!");
 });
 
-app.get("/contato", (req, res) => {
+route.get("/contato", (req, res) => {
   //simulando consulta do banco de dados
   const data = [
     {
@@ -38,7 +40,7 @@ app.get("/contato", (req, res) => {
     data,
   });
 });
-
+app.use(route);
 const PORT = 8080;
 app.listen(PORT, () => {
   console.log("server booted on port 8080, rota http://localhost:8080/contato");
