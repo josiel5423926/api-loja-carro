@@ -17,7 +17,7 @@ route.get("/contato", (req, res) => {
   const data = [
     {
       id: 1,
-      nome: "dudu maria",
+      nome: "teste",
       email: "josiel.dj@gmail.com",
       createdAt: "21-11-2022",
     },
@@ -41,6 +41,12 @@ route.get("/contato", (req, res) => {
     },
     {
       id: 5,
+      nome: "Josiel Souza",
+      email: "solange@gmail.com",
+      createdAt: "05-11-2022",
+    },
+    {
+      id: 6,
       nome: "Josiel Souza",
       email: "solange@gmail.com",
       createdAt: "05-11-2022",
