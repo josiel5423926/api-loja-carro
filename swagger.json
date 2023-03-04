@@ -10,7 +10,7 @@
   },
   "server": [
     {
-      "url": "http://localhost:3333",
+      "url": "https://api-loja-carro.onrender.com",
       "description": "Create a new car"
     }
   ],
