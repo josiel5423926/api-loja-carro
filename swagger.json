@@ -10,7 +10,7 @@
   },
   "server": [
     {
-      "url": "https://api-loja-carro.onrender.com",
+      "url": "https://api-loja-carro.onrender.com/",
       "description": "Create a new car"
     }
   ],
