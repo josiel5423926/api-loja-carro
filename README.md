@@ -26,6 +26,10 @@ Rotas para deletar
 Acessar a documentação 
 ### https://api-loja-carro.onrender.com/api-docs/
 
+Ou se for local use 
+### http://localhost:3333/api-docs/
+
+
 - Para rodar os teste
 ### npm run test
 

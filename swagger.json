@@ -57,21 +57,21 @@
         }
       }
     },
-    "/fetchAll": {
+    "/": {
       "get": {
         "summary": "search all cars",
         "description": "search all cars",
         "tags": ["Car"]
       }
     },
-    "/changeCar/{:id_car}": {
-      "put": {
-        "description": "change cars",
-        "summary": "change cars",
+    "/changeCar/{id_car}": {
+      "patch": {
+        "description": "alterar carros",
+        "summary": "alterar carros",
         "tags": ["Car"],
-        "paramenters": [
+        "parameters": [
           {
-            "name": "id",
+            "name": "id_car",
             "in": "path"
           }
         ],
@@ -97,9 +97,9 @@
             }
           }
         },
-        "response": {
+        "responses": {
           "201": {
-            "description": "Change successfully",
+            "description": "Alterado com sucesso",
             "content": {
               "application/json": {
                 "schema": {
@@ -112,14 +112,14 @@
         }
       }
     },
-    "/deleteCar/{:id_car}": {
+    "/deleteCar/{id_car}": {
       "delete": {
-        "description": "delete cars",
-        "summary": "delete cars",
+        "description": "deletar carros",
+        "summary": "deletar carros",
         "tags": ["Car"],
-        "paramenters": [
+        "parameters": [
           {
-            "id_car": "id",
+            "name": "id_car",
             "in": "path"
           }
         ]
