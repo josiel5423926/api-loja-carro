@@ -8,6 +8,8 @@ export const routes = Router();
 const customers: Customer[] = [];
 
 routes.get("/", (request, response) => {
+  const startTime = new Date().getTime();
+  
   if (customers.length === 0) {
     customers.push(
       {
@@ -32,8 +34,30 @@ routes.get("/", (request, response) => {
       }
     );
   }
-  return response.status(200).json(customers);
+
+  const timeout = 200; 
+
+  const timer = setTimeout(() => {
+    response.status(500).json({
+      message: "Aguarde um pouco.",
+      exceededTimeLimit: true,
+    });
+  }, timeout);
+
+  response.on("finish", () => {
+    clearTimeout(timer);
+  });
+
+  response.status(200).json(customers);
+
+  const endTime = new Date().getTime();
+  const elapsedTime = endTime - startTime;
+
+  if (elapsedTime > timeout) {
+    console.warn(`A resposta levou ${elapsedTime} ms, o que excedeu o tempo limite de ${timeout} ms.`);
+  }
 });
+
 routes.post("/createCar", (request, response) => {
   const {
     name_car,
@@ -61,6 +85,7 @@ routes.post("/createCar", (request, response) => {
 
   return response.status(201).json(newCustomer);
 });
+
 routes.patch("/changeCar/:id_car", (request, response) => {
   const { id_car } = request.params;
   const {
